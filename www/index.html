@@ -166,13 +166,14 @@
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
       active = true;
-      startTime = new Data();
+      startTime = new Date();
         
         
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
+      active = false;
         
         
     }
@@ -198,7 +199,7 @@
     // 繰り返し実行する処理
     function timer(){  
       if (active == true){
-        var currentTime = new Data();
+        var currentTime = new Date();
         var time = (currentTime - startTime)/1000;
         $("#time").html("経過時間: "+parseInt(time));
       }
